@@ -1,20 +1,190 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Website OSIS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website OSIS</title>
 </head>
 <body>
 
-  <h1>Struktur OSIS</h1>
+    <header>
+        <img src="osis.png" alt="Logo OSIS" class="logo">
+        <h1>Organisasi Siswa Intra Sekolah</h1>
+        <p>SMK ASSYAFIIYAH 01 JAKARTA</p>
+    </header>
 
-  <h3>Ketua</h3>
-  <img src="ketua.png" width="200">
+    <nav>
+        <ul>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#visi">Visi & Misi</a></li>
+            <li><a href="#pengurus">Pengurus</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+        </ul>
+    </nav>
 
-  <h3>Wakil</h3>
-  <img src="wakil.png" width="200">
+    <section id="profil" class="section">
+        <h2>Profil OSIS</h2>
+        <p>OSIS adalah organisasi resmi siswa di sekolah yang bertujuan membentuk karakter, kreativitas, dan tanggung jawab siswa.</p>
+    </section>
 
-  <h3>Bendahara</h3>
-  <img src="bendahara.png" width="200">
+    <section id="visi" class="section">
+        <h2>Visi & Misi</h2>
+        <h3>Visi</h3>
+        <p>Mewujudkan OSIS smk assyafiiyah yang modern dan berintegritas dengan memanfaatkan teknologi secara positif, membangun solidaritas yang kuat antar siswa, dan memperkuat nilai-nilai keagamaan serta menumbuhkan kreativitas untuk menciptakan lingkungan sekolah yang inspiratif dan berprestasi</p>
+
+        <h3>Misi</h3>
+        <ul>
+            <li>Mengembangkan potensi siswa melalui kegiatan positif.</li>
+            <li>Menciptakan lingkungan sekolah yang nyaman dan peduli.</li>
+            <li>Mendorong kreativitas dan penggunaan teknologi.</li>
+        </ul>
+    </section>
+
+    <section id="pengurus" class="section">
+        <h2>Struktur Pengurus OSIS</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="ketua.png" alt="Ketua OSIS">
+                <h4>Ketua OSIS</h4>
+                <p>Muhammad Faqih</p>
+            </div>
+            <div class="card">
+                <img src="wakil.png" alt="Wakil Ketua">
+                <h4>Wakil Ketua</h4>
+                <p>Raihana Nurpadhilah</p>
+            </div>
+            <div class="card">
+                <img src="sekretaris.png" alt="Sekretaris">
+                <h4>Sekretaris 1</h4>
+                <h4>Sekretaris 2 </h4>
+                <p>Nama Sekretaris</p>
+            </div>
+            <div class="card">
+                <img src="bendahara.png" alt="Bendahara">
+                <h4>Bendahara</h4>
+                <li>Keyza Herlianda</li>
+                <li>Hasina Aliya Hadi</li>
+            </div>
+        </div>
+            <div class="card">
+                <img src="humas.png" alt="Humas">
+                <h4>Humas</h4>
+                <ul>
+                    <li>Allysa Kayla</li>
+                    <li>Farras Musyafa</li>
+                    <li>Fahri</li>
+                    <li>Vaiz Trilaksono</li>
+                </ul>
+            </div>
+            <div class="card">
+                <img src="sekbid1.png" alt="Seksi Pembinaan Kualitas Jasmani,Kesehatan Dan Gizi">
+                <h4>Seksi Pembinaan Kualitas Jasmani,Kesehatan Dan Gizi</h4>
+                <p>Nama</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="section">
+        <h2>Galeri Kegiatan OSIS</h2>
+        <div class="galeri">
+            <img src="kegiatan1.png" alt="Kegiatan OSIS">
+            <img src="kegiatan2.png" alt="Kegiatan OSIS">
+            <img src="kegiatan3.png" alt="Kegiatan OSIS">
+        </div>
+    </section>
+
+      <footer>
+        <p>© 2025 OSIS SMK Assyafiiyah 01 Jakarta. All Rights Reserved.</p>
+        <p>Email: osis@smkassyafiiyah01.sch.id | Instagram: @osis_smkassyafiiyah01</p>
+    </footer>
 
 </body>
 </html>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background: #02ad83;
+    color: white;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background: #a3ecb2;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 40px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0002;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.galeri {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.galeri img {
+    width: 250px;
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #98f68a;
+    color: rgb(255, 255, 255);
+    margin-top: 40px;
+}
+</style>
+
