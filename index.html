@@ -195,10 +195,71 @@
         <img src="tt.png" width="35">
 </footer>
     </footer>
+        <script>
+function changeSlide(button, step) {
+
+    const slider = button.parentElement;
+    const slides = slider.querySelectorAll(".slide");
+
+    let current = 0;
+
+    slides.forEach((slide, index)=>{
+        if(slide.classList.contains("active")){
+            current = index;
+            slide.classList.remove("active");
+        }
+    });
+
+    current += step;
+
+    if(current < 0) current = slides.length - 1;
+    if(current >= slides.length) current = 0;
+
+    slides[current].classList.add("active");
+}
+</script>
 </body>
 </html>
 
 <style>
+    .slider{
+    position:relative;
+    width:100%;
+    height:220px;
+    overflow:hidden;
+}
+
+.slide{
+    display:none;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.slide.active{
+    display:block;
+}
+
+.prev,.next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    border:none;
+    padding:8px 12px;
+    cursor:pointer;
+    border-radius:50%;
+}
+
+.prev{
+    left:10px;
+}
+
+.next{
+    right:10px;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
