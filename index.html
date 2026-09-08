@@ -5,7 +5,100 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>OSIS SMK Assyafiiyah 01 Jakarta</title>
+/* ===================== */
+/* KOTAK SARAN */
+/* ===================== */
 
+.saran-container{
+    max-width:800px;
+    margin:auto;
+}
+
+.saran-form{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    margin-bottom:30px;
+}
+
+.saran-form input,
+.saran-form textarea{
+    width:100%;
+    padding:13px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    outline:none;
+}
+
+.saran-form input:focus,
+.saran-form textarea:focus{
+    border-color:#00a884;
+}
+
+.saran-form textarea{
+    height:120px;
+    resize:none;
+}
+
+.btn-saran{
+    width:100%;
+    padding:13px;
+    border:none;
+    border-radius:8px;
+    background:#00a884;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-saran:hover{
+    background:#008f70;
+}
+
+.daftar-saran{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.saran-item{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    border-left:5px solid #00a884;
+}
+
+.saran-item h4{
+    color:#009970;
+    margin-bottom:8px;
+}
+
+.saran-item p{
+    line-height:1.6;
+    margin-bottom:12px;
+}
+
+.hapus-saran{
+    border:none;
+    background:#e74c3c;
+    color:white;
+    padding:7px 12px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:12px;
+}
+
+.tanggal-saran{
+    color:#888;
+    font-size:12px;
+    margin-bottom:8px;
+}
 <style>
 
 *{
@@ -175,6 +268,43 @@ nav ul li a:hover{
 .next{
     right:10px;
 }
+    <!-- ===================== -->
+<!-- KOTAK SARAN -->
+<!-- ===================== -->
+
+<section id="saran" class="section">
+
+    <h2>Kotak Saran</h2>
+
+    <div class="saran-container">
+
+        <div class="saran-form">
+
+            <input 
+                type="text" 
+                id="namaSaran" 
+                placeholder="Masukkan nama kamu"
+                maxlength="50"
+            >
+
+            <textarea 
+                id="komentarSaran" 
+                placeholder="Tulis saran atau komentar kamu..."
+                maxlength="500"
+            ></textarea>
+
+            <button class="btn-saran" onclick="kirimSaran()">
+                Kirim Saran
+            </button>
+
+        </div>
+
+        <div class="daftar-saran" id="daftarSaran">
+        </div>
+
+    </div>
+
+</section>
 
 /* FOOTER */
 
@@ -241,6 +371,7 @@ nav ul li{
 <li><a href="#visi">Visi & Misi</a></li>
 <li><a href="#pengurus">Pengurus</a></li>
 <li><a href="#galeri">Galeri</a></li>
+<li><a href="#Kotak Saran">Kotak Saran</li>
 </ul>
 </nav>
 <section id="profil" class="section">
@@ -446,7 +577,7 @@ serta membangun solidaritas dan kreativitas siswa.
     </a>
 
 </footer>
-
+    
 <script>
 
 //=======================
@@ -527,6 +658,134 @@ card.style.transform="translateY(40px)";
 card.style.transition=".6s";
 observer.observe(card);
 });
+    // =======================
+// KOTAK SARAN
+// =======================
+
+let saran = JSON.parse(localStorage.getItem("saranOSIS")) || [];
+
+function tampilkanSaran(){
+
+    const daftar = document.getElementById("daftarSaran");
+
+    daftar.innerHTML = "";
+
+    if(saran.length === 0){
+
+        daftar.innerHTML = `
+            <div class="saran-item">
+                <p style="text-align:center;color:#888;">
+                    Belum ada saran. Jadilah yang pertama memberikan saran!
+                </p>
+            </div>
+        `;
+
+        return;
+    }
+
+    saran.forEach((item,index)=>{
+
+        const div = document.createElement("div");
+
+        div.className = "saran-item";
+
+        div.innerHTML = `
+            <h4>${escapeHTML(item.nama)}</h4>
+
+            <div class="tanggal-saran">
+                ${escapeHTML(item.tanggal)}
+            </div>
+
+            <p>${escapeHTML(item.komentar)}</p>
+
+            <button 
+                class="hapus-saran"
+                onclick="hapusSaran(${index})">
+                Hapus
+            </button>
+        `;
+
+        daftar.appendChild(div);
+
+    });
+
+}
+
+
+// =======================
+// KIRIM SARAN
+// =======================
+
+function kirimSaran(){
+
+    const nama = document.getElementById("namaSaran").value.trim();
+    const komentar = document.getElementById("komentarSaran").value.trim();
+
+    if(nama === "" || komentar === ""){
+
+        alert("Nama dan komentar harus diisi!");
+
+        return;
+    }
+
+    const dataBaru = {
+
+        nama: nama,
+
+        komentar: komentar,
+
+        tanggal: new Date().toLocaleDateString("id-ID",{
+            day:"numeric",
+            month:"long",
+            year:"numeric"
+        })
+
+    };
+
+    saran.unshift(dataBaru);
+
+    localStorage.setItem(
+        "saranOSIS",
+        JSON.stringify(saran)
+    );
+
+    document.getElementById("namaSaran").value = "";
+    document.getElementById("komentarSaran").value = "";
+
+    tampilkanSaran();
+
+    alert("Saran berhasil dikirim!");
+
+}
+
+
+// =======================
+// HAPUS SARAN
+// =======================
+
+function hapusSaran(index){
+
+    if(confirm("Yakin ingin menghapus saran ini?")){
+
+        saran.splice(index,1);
+
+        localStorage.setItem(
+            "saranOSIS",
+            JSON.stringify(saran)
+        );
+        tampilkanSaran();
+    }
+}
+// =======================
+// KEAMANAN TEKS
+// =======================
+function escapeHTML(text){
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+}
+// Tampilkan saran saat website dibuka
+tampilkanSaran();
 </script>
 </body>
 </html>
