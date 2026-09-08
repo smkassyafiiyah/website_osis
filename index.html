@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,6 +8,10 @@
 <title>OSIS SMK Assyafiiyah 01 Jakarta</title>
 
 <style>
+
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
@@ -20,6 +25,7 @@ body{
     background:#f4f8f7;
     color:#333;
 }
+
 
 /* =========================
    HEADER
@@ -84,6 +90,7 @@ header p{
     opacity:.95;
 }
 
+
 /* =========================
    NAVBAR
 ========================= */
@@ -121,9 +128,10 @@ nav ul li a{
 
 nav ul li a:hover{
     background:rgba(255,255,255,.15);
-    color:#fff;
+    color:white;
     transform:translateY(-2px);
 }
+
 
 /* =========================
    SECTION
@@ -156,6 +164,7 @@ nav ul li a:hover{
     text-align:center;
 }
 
+
 /* =========================
    VISI MISI
 ========================= */
@@ -175,6 +184,7 @@ nav ul li a:hover{
 #visi ul{
     padding-left:25px;
 }
+
 
 /* =========================
    CARDS
@@ -223,6 +233,7 @@ nav ul li a:hover{
     padding:0 18px 20px 38px;
     color:#555;
 }
+
 
 /* =========================
    SLIDER
@@ -273,6 +284,88 @@ nav ul li a:hover{
     right:12px;
 }
 
+
+/* =========================
+   KOTAK SARAN
+========================= */
+
+#saran{
+    background:#f4f8f7;
+}
+
+.saran-box{
+    max-width:700px;
+    margin:0 auto;
+    background:white;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    border:1px solid rgba(0,168,132,.1);
+}
+
+.saran-box h3{
+    text-align:center;
+    color:#009970;
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.saran-box > p{
+    text-align:center;
+    color:#777;
+    margin-bottom:25px;
+}
+
+.saran-box input,
+.saran-box textarea{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+}
+
+.saran-box input:focus,
+.saran-box textarea:focus{
+    border-color:#00a884;
+    box-shadow:0 0 0 3px rgba(0,168,132,.1);
+}
+
+.saran-box textarea{
+    height:140px;
+    resize:none;
+}
+
+.saran-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#00b894,#009970);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.saran-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(0,150,120,.25);
+}
+
+.saran-success{
+    display:none;
+    text-align:center;
+    margin-top:15px;
+    color:#009970;
+    font-weight:bold;
+}
+
+
 /* =========================
    FOOTER
 ========================= */
@@ -297,6 +390,7 @@ footer img{
 footer img:hover{
     transform:scale(1.15);
 }
+
 
 /* =========================
    RESPONSIVE HP
@@ -349,12 +443,48 @@ footer img:hover{
     .slide{
         height:210px;
     }
+
+    .saran-box{
+        padding:25px 20px;
+    }
+
+}
+
+
+/* =========================
+   ANIMASI
+========================= */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+header .logo{
+    animation:fadeDown .8s ease;
+}
+
+header h1{
+    animation:fadeDown 1s ease;
+}
+
+header p{
+    animation:fadeDown 1.2s ease;
 }
 
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -376,17 +506,31 @@ footer img:hover{
 ========================= -->
 
 <nav>
+
 <ul>
 
-    <li><a href="#profil">Profil</a></li>
+    <li>
+        <a href="#profil">Profil</a>
+    </li>
 
-    <li><a href="#visi">Visi & Misi</a></li>
+    <li>
+        <a href="#visi">Visi & Misi</a>
+    </li>
 
-    <li><a href="#pengurus">Pengurus</a></li>
+    <li>
+        <a href="#pengurus">Pengurus</a>
+    </li>
 
-    <li><a href="#galeri">Galeri</a></li>
+    <li>
+        <a href="#galeri">Galeri</a>
+    </li>
+
+    <li>
+        <a href="#saran">Kotak Saran</a>
+    </li>
 
 </ul>
+
 </nav>
 
 
@@ -427,15 +571,25 @@ footer img:hover{
 
     <ul>
 
-        <li>Mengembangkan potensi siswa melalui kegiatan positif.</li>
+        <li>
+            Mengembangkan potensi siswa melalui kegiatan positif.
+        </li>
 
-        <li>Meningkatkan kreativitas dan inovasi.</li>
+        <li>
+            Meningkatkan kreativitas dan inovasi.
+        </li>
 
-        <li>Membangun lingkungan sekolah yang bersih dan nyaman.</li>
+        <li>
+            Membangun lingkungan sekolah yang bersih dan nyaman.
+        </li>
 
-        <li>Memanfaatkan teknologi digital untuk komunikasi.</li>
+        <li>
+            Memanfaatkan teknologi digital untuk komunikasi.
+        </li>
 
-        <li>Menumbuhkan sikap disiplin dan tanggung jawab.</li>
+        <li>
+            Menumbuhkan sikap disiplin dan tanggung jawab.
+        </li>
 
     </ul>
 
@@ -459,7 +613,9 @@ footer img:hover{
 
             <h4>Pembina OSIS</h4>
 
-            <p>Rizqi Renaldi, S.Pd</p>
+            <p>
+                Rizqi Renaldi, S.Pd
+            </p>
 
         </div>
 
@@ -489,7 +645,9 @@ footer img:hover{
 
             <h4>Ketua OSIS</h4>
 
-            <p>Raihana Nurpadhilah</p>
+            <p>
+                Raihana Nurpadhilah
+            </p>
 
         </div>
 
@@ -500,7 +658,9 @@ footer img:hover{
 
             <h4>Wakil Ketua</h4>
 
-            <p>Farras Musyafa</p>
+            <p>
+                Farras Musyafa
+            </p>
 
         </div>
 
@@ -564,7 +724,9 @@ footer img:hover{
 
             <img src="sekbid1.png" alt="Sekbid 1">
 
-            <h4>Seksi Pembinaan Kreativitas</h4>
+            <h4>
+                Seksi Pembinaan Kreativitas
+            </h4>
 
             <ol>
 
@@ -587,7 +749,9 @@ footer img:hover{
 
             <img src="sekbid2.png" alt="Sekbid 2">
 
-            <h4>Seksi Pembinaan Keimanan dan Ketaqwaan</h4>
+            <h4>
+                Seksi Pembinaan Keimanan dan Ketaqwaan
+            </h4>
 
             <ol>
 
@@ -610,7 +774,9 @@ footer img:hover{
 
             <img src="sekbid3.png" alt="Sekbid 3">
 
-            <h4>Seksi Pembinaan Sastra dan Budaya</h4>
+            <h4>
+                Seksi Pembinaan Sastra dan Budaya
+            </h4>
 
             <ol>
 
@@ -631,7 +797,9 @@ footer img:hover{
 
             <img src="sekbid4.png" alt="Sekbid 4">
 
-            <h4>Seksi Pembinaan Budi Pekerti</h4>
+            <h4>
+                Seksi Pembinaan Budi Pekerti
+            </h4>
 
             <ol>
 
@@ -652,7 +820,9 @@ footer img:hover{
 
             <img src="sekbid5.png" alt="Sekbid 5">
 
-            <h4>Seksi Pembinaan Jasmani dan Kesehatan</h4>
+            <h4>
+                Seksi Pembinaan Jasmani dan Kesehatan
+            </h4>
 
             <ol>
 
@@ -689,21 +859,35 @@ footer img:hover{
 
             <div class="slider">
 
-                <img class="slide active" src="kegiatan1.png" alt="Hari Kartini">
+                <img class="slide active"
+                     src="kegiatan1.png"
+                     alt="Hari Kartini">
 
-                <img class="slide" src="kegiatan1-2.png" alt="Hari Kartini">
+                <img class="slide"
+                     src="kegiatan1-2.png"
+                     alt="Hari Kartini">
 
-                <img class="slide" src="kegiatan1-3.png" alt="Hari Kartini">
+                <img class="slide"
+                     src="kegiatan1-3.png"
+                     alt="Hari Kartini">
 
-                <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+                <button class="prev"
+                        onclick="changeSlide(this,-1)">
+                    ❮
+                </button>
 
-                <button class="next" onclick="changeSlide(this,1)">❯</button>
+                <button class="next"
+                        onclick="changeSlide(this,1)">
+                    ❯
+                </button>
 
             </div>
 
             <h4>Hari Kartini</h4>
 
-            <p>SMK Assyafiiyah 01 Jakarta</p>
+            <p>
+                SMK Assyafiiyah 01 Jakarta
+            </p>
 
         </div>
 
@@ -712,21 +896,35 @@ footer img:hover{
 
             <div class="slider">
 
-                <img class="slide active" src="kegiatan2.png" alt="Sanlat & Bukber">
+                <img class="slide active"
+                     src="kegiatan2.png"
+                     alt="Sanlat & Bukber">
 
-                <img class="slide" src="kegiatan2-2.png" alt="Sanlat & Bukber">
+                <img class="slide"
+                     src="kegiatan2-2.png"
+                     alt="Sanlat & Bukber">
 
-                <img class="slide" src="kegiatan2-3.png" alt="Sanlat & Bukber">
+                <img class="slide"
+                     src="kegiatan2-3.png"
+                     alt="Sanlat & Bukber">
 
-                <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+                <button class="prev"
+                        onclick="changeSlide(this,-1)">
+                    ❮
+                </button>
 
-                <button class="next" onclick="changeSlide(this,1)">❯</button>
+                <button class="next"
+                        onclick="changeSlide(this,1)">
+                    ❯
+                </button>
 
             </div>
 
             <h4>Sanlat & Bukber</h4>
 
-            <p>Kegiatan Ramadhan</p>
+            <p>
+                Kegiatan Ramadhan
+            </p>
 
         </div>
 
@@ -735,28 +933,106 @@ footer img:hover{
 
             <div class="slider">
 
-                <img class="slide active" src="kegiatan3.png" alt="Classmeet & Fun Run">
+                <img class="slide active"
+                     src="kegiatan3.png"
+                     alt="Classmeet & Fun Run">
 
-                <img class="slide" src="kegiatan3-2.png" alt="Classmeet & Fun Run">
+                <img class="slide"
+                     src="kegiatan3-2.png"
+                     alt="Classmeet & Fun Run">
 
-                <img class="slide" src="kegiatan3-3.png" alt="Classmeet & Fun Run">
+                <img class="slide"
+                     src="kegiatan3-3.png"
+                     alt="Classmeet & Fun Run">
 
-                <img class="slide" src="kegiatan3-4.png" alt="Classmeet & Fun Run">
+                <img class="slide"
+                     src="kegiatan3-4.png"
+                     alt="Classmeet & Fun Run">
 
-                <img class="slide" src="kegiatan3-5.png" alt="Classmeet & Fun Run">
+                <img class="slide"
+                     src="kegiatan3-5.png"
+                     alt="Classmeet & Fun Run">
 
-                <button class="prev" onclick="changeSlide(this,-1)">❮</button>
+                <button class="prev"
+                        onclick="changeSlide(this,-1)">
+                    ❮
+                </button>
 
-                <button class="next" onclick="changeSlide(this,1)">❯</button>
+                <button class="next"
+                        onclick="changeSlide(this,1)">
+                    ❯
+                </button>
 
             </div>
 
             <h4>Classmeet & Fun Run</h4>
 
-            <p>Kegiatan Akhir Semester</p>
+            <p>
+                Kegiatan Akhir Semester
+            </p>
 
         </div>
 
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KOTAK SARAN
+========================= -->
+
+<section id="saran" class="section">
+
+    <h2>Kotak Saran</h2>
+
+    <div class="saran-box">
+
+        <h3>💬 Sampaikan Saranmu</h3>
+
+        <p>
+            Punya kritik, saran, atau ide untuk OSIS?
+            Sampaikan di sini!
+        </p>
+
+        <form id="formSaran">
+
+            <input
+                type="text"
+                id="nama"
+                placeholder="Nama kamu"
+                required
+            >
+
+            <input
+                type="text"
+                id="kelas"
+                placeholder="Kelas"
+                required
+            >
+
+            <textarea
+                id="isiSaran"
+                placeholder="Tulis saran atau masukan kamu..."
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                class="saran-btn">
+                Kirim Saran
+            </button>
+
+        </form>
+
+        <div
+            class="saran-success"
+            id="saranSuccess">
+
+            ✅ Terima kasih! Saran kamu sudah dikirim.
+
+        </div>
 
     </div>
 
@@ -778,16 +1054,26 @@ footer img:hover{
     </p>
 
 
-    <a href="https://instagram.com/osis.smkassyafiiyah01" target="_blank">
+    <a
+        href="https://instagram.com/osis.smkassyafiiyah01"
+        target="_blank">
 
-        <img src="ig.png" width="50" alt="Instagram">
+        <img
+            src="ig.png"
+            width="50"
+            alt="Instagram">
 
     </a>
 
 
-    <a href="https://www.tiktok.com/@osissmkassyafiiya" target="_blank">
+    <a
+        href="https://www.tiktok.com/@osissmkassyafiiya"
+        target="_blank">
 
-        <img src="tt.png" width="30" alt="TikTok">
+        <img
+            src="tt.png"
+            width="30"
+            alt="TikTok">
 
     </a>
 
@@ -869,7 +1155,7 @@ document.querySelectorAll(".slider").forEach(slider=>{
 
 
 /* =========================
-   ANIMASI MUNCUL
+   ANIMASI CARD
 ========================= */
 
 const cards = document.querySelectorAll(".card");
@@ -903,7 +1189,45 @@ cards.forEach(card=>{
 
 });
 
+
+/* =========================
+   FORM KOTAK SARAN
+========================= */
+
+document
+.getElementById("formSaran")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nama =
+        document.getElementById("nama").value;
+
+    const kelas =
+        document.getElementById("kelas").value;
+
+    const saran =
+        document.getElementById("isiSaran").value;
+
+
+    const pesan =
+        "Halo OSIS SMK Assyafiiyah 01 Jakarta\n\n" +
+        "Nama: " + nama + "\n" +
+        "Kelas: " + kelas + "\n" +
+        "Saran: " + saran;
+    );
+
+    document
+        .getElementById("saranSuccess")
+        .style.display = "block";
+
+
+    this.reset();
+
+});
+
 </script>
 
 </body>
 </html>
+```
