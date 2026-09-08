@@ -213,12 +213,6 @@ nav ul li a:hover{
 
 /* ================= GALERI ================= */
 
-/*
-   Tinggi slider dibuat TETAP.
-   Jadi ketika gambar berganti,
-   card tidak ikut naik/turun.
-*/
-
 .slider{
     position:relative;
     width:100%;
@@ -226,12 +220,6 @@ nav ul li a:hover{
     overflow:hidden;
     background:#f5f8f7;
 }
-
-/*
-   Semua gambar berada di posisi yang sama.
-   Tidak menggunakan display:none agar
-   gambar tidak menyebabkan layout bergeser.
-*/
 
 .slide{
     display:block;
@@ -253,8 +241,6 @@ nav ul li a:hover{
     opacity:1;
     pointer-events:auto;
 }
-
-/* Tombol slider */
 
 .prev,
 .next{
@@ -365,6 +351,11 @@ nav ul li a:hover{
     box-shadow:0 8px 20px rgba(0,150,120,.25);
 }
 
+.saran-btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
 .saran-success{
     display:none;
     text-align:center;
@@ -439,6 +430,13 @@ nav ul li a:hover{
     background:white;
     padding:30px;
     border-radius:15px;
+}
+
+.status-saran{
+    text-align:center;
+    margin-top:15px;
+    font-size:14px;
+    color:#888;
 }
 
 @keyframes fadeIn{
@@ -548,11 +546,6 @@ header p{
         font-size:14px;
     }
 
-    /*
-       Slider mobile juga punya tinggi tetap
-       supaya tidak glitch.
-    */
-
     .slider{
         height:260px;
     }
@@ -604,13 +597,9 @@ header p{
 <ul>
 
     <li><a href="#profil">Profil</a></li>
-
     <li><a href="#visi">Visi & Misi</a></li>
-
     <li><a href="#pengurus">Pengurus</a></li>
-
     <li><a href="#galeri">Galeri</a></li>
-
     <li><a href="#saran">Kotak Saran</a></li>
 
 </ul>
@@ -655,13 +644,9 @@ header p{
     <ul>
 
         <li>Mengembangkan potensi siswa melalui kegiatan positif.</li>
-
         <li>Meningkatkan kreativitas dan inovasi.</li>
-
         <li>Membangun lingkungan sekolah yang bersih dan nyaman.</li>
-
         <li>Memanfaatkan teknologi digital untuk komunikasi.</li>
-
         <li>Menumbuhkan sikap disiplin dan tanggung jawab.</li>
 
     </ul>
@@ -678,218 +663,117 @@ header p{
     <div class="cards">
 
         <div class="card">
-
             <img src="pembina.jpg" alt="Pembina OSIS">
-
             <h4>Pembina OSIS</h4>
-
             <p>Rizqi Renaldi, S.Pd</p>
-
         </div>
 
-
         <div class="card">
-
             <img src="mpk.png" alt="MPK">
-
             <h4>MPK</h4>
-
             <ol>
-
                 <li>Fikih Zahru Alkasaf</li>
-
                 <li>Ikhtiar Ahmad Khadafi</li>
-
                 <li>Muhammad Athalla Sakhi</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="ketua.jpg" alt="Ketua OSIS">
-
             <h4>Ketua OSIS</h4>
-
             <p>Raihana Nurpadhilah</p>
-
         </div>
 
-
         <div class="card">
-
             <img src="wakil.png" alt="Wakil Ketua">
-
             <h4>Wakil Ketua</h4>
-
             <p>Farras Musyafa</p>
-
         </div>
 
-
         <div class="card">
-
             <img src="sekretaris.png" alt="Sekretaris">
-
             <h4>Sekretaris</h4>
-
             <ol>
-
                 <li>Fatimahtul Zahra</li>
-
                 <li>Annisa Tri Andini</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="bendahara.png" alt="Bendahara">
-
             <h4>Bendahara</h4>
-
             <ol>
-
                 <li>Keyza Herlianda</li>
-
                 <li>Hasina Aliya Hadi</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="humas.jpg" alt="Humas">
-
             <h4>Humas</h4>
-
             <ol>
-
                 <li>Allysa Kayla</li>
-
                 <li>Adil Mukhlis</li>
-
                 <li>Fahri Fauzan F.</li>
-
                 <li>Muhammad Faqih</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="sekbid1.png" alt="Seksi Pembinaan Kreativitas">
-
             <h4>Seksi Pembinaan Kreativitas</h4>
-
             <ol>
-
                 <li>M. Rhandy Angkasa</li>
-
                 <li>Hidayatun Masruroh</li>
-
                 <li>Jepira Nuraini Zamilah</li>
-
                 <li>Siti Aminah</li>
-
                 <li>Tiara Larisa</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="sekbid2.png" alt="Seksi Pembinaan Keimanan">
-
             <h4>Seksi Pembinaan Keimanan dan Ketaqwaan</h4>
-
             <ol>
-
                 <li>Fakhri Zhofransyah</li>
-
                 <li>Cindy Aulia Muthi</li>
-
                 <li>M. Ibnu Nabil</li>
-
                 <li>Widya Salma Lestaluhu</li>
-
                 <li>Zahra Aulia</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="sekbid3.png" alt="Seksi Sastra dan Budaya">
-
             <h4>Seksi Pembinaan Sastra dan Budaya</h4>
-
             <ol>
-
                 <li>Cut Mutiara</li>
-
                 <li>Adela Putri Utami</li>
-
                 <li>Aslamatul Halimah</li>
-
                 <li>Lutfhia Dwi Lestari</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="sekbid4.png" alt="Seksi Budi Pekerti">
-
             <h4>Seksi Pembinaan Budi Pekerti</h4>
-
             <ol>
-
                 <li>Viany Hayatul Maula</li>
-
                 <li>Vaiz Trilaksono</li>
-
                 <li>Fitria Anggraini</li>
-
                 <li>Cantika Wijayani</li>
-
             </ol>
-
         </div>
 
-
         <div class="card">
-
             <img src="sekbid5.png" alt="Seksi Jasmani">
-
             <h4>Seksi Pembinaan Jasmani dan Kesehatan</h4>
-
             <ol>
-
                 <li>Muhammad Daffa Razzaq</li>
-
                 <li>Kayla Ramadhani</li>
-
                 <li>Ummamah Fathia</li>
-
                 <li>Cheryl Aqilla Novansyah</li>
-
             </ol>
-
         </div>
 
     </div>
@@ -903,7 +787,6 @@ header p{
 
     <h2>Galeri Kegiatan</h2>
 
-
     <!-- HARI KARTINI -->
 
     <div class="card">
@@ -913,22 +796,17 @@ header p{
         <div class="slider">
 
             <img src="kegiatan1.png" class="slide active" alt="Hari Kartini">
-
             <img src="kegiatan1-2.png" class="slide" alt="Hari Kartini">
-
             <img src="kegiatan1-3.png" class="slide" alt="Hari Kartini">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
-
             <button class="next" onclick="changeSlide(this,1)">❯</button>
 
         </div>
 
     </div>
 
-
     <br>
-
 
     <!-- SANLAT -->
 
@@ -939,22 +817,17 @@ header p{
         <div class="slider">
 
             <img src="kegiatan2.png" class="slide active" alt="Sanlat">
-
             <img src="kegiatan2-2.png" class="slide" alt="Sanlat">
-
             <img src="kegiatan2-3.png" class="slide" alt="Sanlat">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
-
             <button class="next" onclick="changeSlide(this,1)">❯</button>
 
         </div>
 
     </div>
 
-
     <br>
-
 
     <!-- CLASSMEET -->
 
@@ -965,26 +838,19 @@ header p{
         <div class="slider">
 
             <img src="kegiatan3.png" class="slide active" alt="Classmeet">
-
             <img src="kegiatan3-2.png" class="slide" alt="Classmeet">
-
             <img src="kegiatan3-3.png" class="slide" alt="Classmeet">
-
             <img src="kegiatan3-4.png" class="slide" alt="Classmeet">
-
             <img src="kegiatan3-5.png" class="slide" alt="Classmeet">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
-
             <button class="next" onclick="changeSlide(this,1)">❯</button>
 
         </div>
 
     </div>
 
-
     <br>
-
 
     <!-- MPLS -->
 
@@ -995,26 +861,22 @@ header p{
         <div class="slider">
 
             <img src="kegiatan4.png" class="slide active" alt="MPLS">
-
             <img src="kegiatan4-2.png" class="slide" alt="MPLS">
-
             <img src="kegiatan4-3.png" class="slide" alt="MPLS">
-
             <img src="kegiatan4-4.png" class="slide" alt="MPLS">
-
             <img src="kegiatan4-6.png" class="slide" alt="MPLS">
-
             <img src="kegiatan4-5.png" class="slide" alt="MPLS">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
-
             <button class="next" onclick="changeSlide(this,1)">❯</button>
 
         </div>
-         <br>
 
+    </div>
 
-    <!-- 17 agustus-->
+    <br>
+
+    <!-- 17 AGUSTUS -->
 
     <div class="card">
 
@@ -1030,7 +892,6 @@ header p{
             <img src="kegiatan4-6.png" class="slide" alt="17 AGUSTUSAN">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
-
             <button class="next" onclick="changeSlide(this,1)">❯</button>
 
         </div>
@@ -1080,6 +941,7 @@ header p{
             <button
                 type="submit"
                 class="saran-btn"
+                id="tombolKirim"
             >
                 Kirim Saran
             </button>
@@ -1091,6 +953,10 @@ header p{
             id="saranSuccess"
         >
             ✅ Saran kamu berhasil dikirim!
+        </div>
+
+        <div class="status-saran" id="statusSaran">
+            🔄 Menghubungkan ke database...
         </div>
 
     </div>
@@ -1137,7 +1003,6 @@ header p{
 
     </a>
 
-
     <a
         href="https://www.tiktok.com/@osissmkassyafiiya"
         target="_blank"
@@ -1154,52 +1019,111 @@ header p{
 </footer>
 
 
-<script>
+<!-- ================================================= -->
+<!-- FIREBASE -->
+<!-- ================================================= -->
+
+<script type="module">
+  import { initializeApp } 
+    from "https://www.gstatic.com/firebasejs/12.2.1/firebase-app.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc,
+    query,
+    orderBy,
+    onSnapshot,
+    serverTimestamp
+  } from "https://www.gstatic.com/firebasejs/12.2.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyArVsNPPWgWcQTnc8Q5x_o-5a5kc4hO6MM",
+    authDomain: "website-osissmkasvie.firebaseapp.com",
+    projectId: "website-osissmkasvie",
+    storageBucket: "website-osissmkasvie.firebasestorage.app",
+    messagingSenderId: "166076128155",
+    appId: "1:166076128155:web:ab27cb92abf1ea39e1df3e"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+const firebaseConfig = {
+    const firebaseConfig = {
+  apiKey: "AIzaSyArVsNPPWgWcQTnc8Q5x_o-5a5kc4hO6MM",
+  authDomain: "website-osissmkasvie.firebaseapp.com",
+  projectId: "website-osissmkasvie",
+  storageBucket: "website-osissmkasvie.firebasestorage.app",
+  messagingSenderId: "166076128155",
+  appId: "1:166076128155:web:ab27cb92abf1ea39e1df3e"
+};
+
+
+/* ================= FIREBASE ================= */
+
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+
+/* ================= COLLECTION ================= */
+
+/*
+   Semua saran akan disimpan di:
+
+   Firestore
+   └── saranOSIS
+        ├── saran 1
+        ├── saran 2
+        ├── saran 3
+        └── dst...
+*/
+
+const saranCollection = collection(db,"saranOSIS");
+
 
 /* ================= SLIDER ================= */
 
-function changeSlide(button,step){
+window.changeSlide = function(button,step){
 
-    const slider=button.parentElement;
+    const slider = button.parentElement;
 
-    const slides=slider.querySelectorAll(".slide");
+    const slides = slider.querySelectorAll(".slide");
 
-    let current=0;
+    let current = 0;
 
     slides.forEach((slide,index)=>{
 
         if(slide.classList.contains("active")){
-
-            current=index;
-
+            current = index;
         }
 
     });
 
     slides[current].classList.remove("active");
 
-    current+=step;
+    current += step;
 
-    if(current>=slides.length){
-        current=0;
+    if(current >= slides.length){
+        current = 0;
     }
 
-    if(current<0){
-        current=slides.length-1;
+    if(current < 0){
+        current = slides.length - 1;
     }
 
     slides[current].classList.add("active");
 
-}
+};
 
 
 /* ================= AUTO SLIDER ================= */
 
 document.querySelectorAll(".slider").forEach(slider=>{
 
-    const slides=slider.querySelectorAll(".slide");
+    const slides = slider.querySelectorAll(".slide");
 
-    let index=0;
+    let index = 0;
 
     setInterval(()=>{
 
@@ -1207,8 +1131,8 @@ document.querySelectorAll(".slider").forEach(slider=>{
 
         index++;
 
-        if(index>=slides.length){
-            index=0;
+        if(index >= slides.length){
+            index = 0;
         }
 
         slides[index].classList.add("active");
@@ -1220,17 +1144,17 @@ document.querySelectorAll(".slider").forEach(slider=>{
 
 /* ================= ANIMASI CARD ================= */
 
-const cards=document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card");
 
-const observer=new IntersectionObserver((entries)=>{
+const observer = new IntersectionObserver((entries)=>{
 
     entries.forEach(entry=>{
 
         if(entry.isIntersecting){
 
-            entry.target.style.opacity="1";
+            entry.target.style.opacity = "1";
 
-            entry.target.style.transform="translateY(0)";
+            entry.target.style.transform = "translateY(0)";
 
         }
 
@@ -1240,35 +1164,32 @@ const observer=new IntersectionObserver((entries)=>{
 
 cards.forEach(card=>{
 
-    card.style.opacity="0";
+    card.style.opacity = "0";
 
-    card.style.transform="translateY(40px)";
+    card.style.transform = "translateY(40px)";
 
-    card.style.transition=".6s";
+    card.style.transition = ".6s";
 
     observer.observe(card);
 
 });
 
 
-/* ================= SISTEM SARAN ================= */
+/* =====================================================
+   FORM SARAN
+   ===================================================== */
 
-let semuaSaran =
-    JSON.parse(localStorage.getItem("saranOSIS")) || [];
+const form = document.getElementById("formSaran");
+
+const tombolKirim = document.getElementById("tombolKirim");
+
+const success = document.getElementById("saranSuccess");
 
 
-/* Tampilkan saran */
-
-tampilkanSaran();
-
-
-/* ================= FORM SARAN ================= */
-
-document
-.getElementById("formSaran")
-.addEventListener("submit",function(e){
+form.addEventListener("submit",async function(e){
 
     e.preventDefault();
+
 
     const nama =
         document.getElementById("nama").value.trim();
@@ -1289,74 +1210,97 @@ document
     }
 
 
-    const dataSaran={
+    /* Tombol dimatikan sementara */
 
-        nama:nama,
+    tombolKirim.disabled = true;
 
-        kelas:kelas,
-
-        isi:isi,
-
-        tanggal:new Date().toLocaleString("id-ID")
-
-    };
+    tombolKirim.textContent = "Mengirim...";
 
 
-    /* Tambahkan saran baru */
+    try{
 
-    semuaSaran.unshift(dataSaran);
+        /* ===============================
+           SIMPAN KE FIRESTORE
+           =============================== */
 
+        await addDoc(saranCollection,{
 
-    /* Simpan ke browser */
+            nama: nama,
 
-    localStorage.setItem(
-        "saranOSIS",
-        JSON.stringify(semuaSaran)
-    );
+            kelas: kelas,
 
+            isi: isi,
 
-    /* Tampilkan ke web */
+            waktu: serverTimestamp()
 
-    tampilkanSaran();
-
-
-    /* Pesan berhasil */
-
-    const success=
-        document.getElementById("saranSuccess");
-
-    success.style.display="block";
+        });
 
 
-    /* Reset form */
+        /* Berhasil */
 
-    this.reset();
+        success.style.display = "block";
+
+        form.reset();
 
 
-    /* Hilangkan pesan */
+        setTimeout(()=>{
 
-    setTimeout(()=>{
+            success.style.display = "none";
 
-        success.style.display="none";
+        },3000);
 
-    },3000);
+
+    }catch(error){
+
+        console.error("Error:",error);
+
+        alert(
+            "Saran gagal dikirim. Pastikan Firebase dan Rules sudah benar."
+        );
+
+    }
+
+
+    tombolKirim.disabled = false;
+
+    tombolKirim.textContent = "Kirim Saran";
 
 });
 
 
-/* ================= TAMPILKAN SARAN ================= */
+/* =====================================================
+   TAMPILKAN SARAN DARI FIRESTORE
+   ===================================================== */
 
-function tampilkanSaran(){
+const daftar =
+    document.getElementById("daftarSaran");
 
-    const daftar=
-        document.getElementById("daftarSaran");
-
-    daftar.innerHTML="";
+const status =
+    document.getElementById("statusSaran");
 
 
-    if(semuaSaran.length===0){
+const q = query(
+    saranCollection,
+    orderBy("waktu","desc")
+);
 
-        daftar.innerHTML=`
+
+/*
+   onSnapshot = REALTIME
+
+   Jadi kalau HP A mengirim saran,
+   HP B yang membuka website akan
+   mendapatkan saran tersebut otomatis.
+*/
+
+onSnapshot(q,(snapshot)=>{
+
+    daftar.innerHTML = "";
+
+
+    if(snapshot.empty){
+
+        daftar.innerHTML = `
 
             <div class="tidak-ada-saran">
 
@@ -1368,53 +1312,113 @@ function tampilkanSaran(){
 
         `;
 
-        return;
+    }else{
+
+        snapshot.forEach(doc=>{
+
+            const saran = doc.data();
+
+            const card =
+                document.createElement("div");
+
+            card.className = "saran-card";
+
+
+            /* ===============================
+               WAKTU
+               =============================== */
+
+            let tanggal = "";
+
+            if(saran.waktu){
+
+                tanggal =
+                    saran.waktu
+                    .toDate()
+                    .toLocaleString("id-ID");
+
+            }
+
+
+            /* ===============================
+               BUAT CARD
+               =============================== */
+
+            card.innerHTML = `
+
+                <div class="saran-header">
+
+                    <strong>
+                        👤 ${escapeHTML(saran.nama || "")}
+                    </strong>
+
+                    <small>
+                        ${escapeHTML(saran.kelas || "")}
+                    </small>
+
+                </div>
+
+                <p>
+                    "${escapeHTML(saran.isi || "")}"
+                </p>
+
+                ${
+                    tanggal
+                    ?
+                    `<span class="tanggal">
+                        🕒 ${tanggal}
+                    </span>`
+                    :
+                    ""
+                }
+
+            `;
+
+
+            daftar.appendChild(card);
+
+        });
 
     }
 
 
-    semuaSaran.forEach(saran=>{
-
-        const card=
-            document.createElement("div");
-
-        card.className="saran-card";
+    status.textContent =
+        "🟢 Database terhubung • Saran diperbarui otomatis";
 
 
-        card.innerHTML=`
+},(error)=>{
 
-            <div class="saran-header">
+    console.error(error);
 
-                <strong>
-                    👤 ${escapeHTML(saran.nama)}
-                </strong>
+    status.textContent =
+        "🔴 Gagal terhubung ke database.";
 
-                <small>
-                    ${escapeHTML(saran.kelas)}
-                </small>
+    daftar.innerHTML = `
 
-            </div>
+        <div class="tidak-ada-saran">
 
-            <p>
-                "${escapeHTML(saran.isi)}"
-            </p>
+            ⚠️ Saran belum dapat dimuat.
 
-        `;
+            <br><br>
 
-        daftar.appendChild(card);
+            Periksa Firebase Firestore Rules.
 
-    });
+        </div>
 
-}
+    `;
+
+});
 
 
-/* ================= KEAMANAN TEXT ================= */
+/* =====================================================
+   KEAMANAN TEXT
+   ===================================================== */
 
 function escapeHTML(text){
 
-    const div=document.createElement("div");
+    const div = document.createElement("div");
 
-    div.textContent=text;
+    div.textContent = text;
 
     return div.innerHTML;
 
