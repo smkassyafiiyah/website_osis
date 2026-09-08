@@ -7,6 +7,7 @@
 <title>OSIS SMK Assyafiiyah 01 Jakarta</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -20,7 +21,8 @@ body{
     color:#333;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header{
     background:linear-gradient(135deg,#00b894,#009970);
     color:white;
@@ -78,7 +80,8 @@ header p{
     z-index:2;
 }
 
-/* NAVBAR */
+/* ================= NAVBAR ================= */
+
 nav{
     background:rgba(0,168,132,.95);
     position:sticky;
@@ -115,7 +118,8 @@ nav ul li a:hover{
     transform:translateY(-2px);
 }
 
-/* SECTION */
+/* ================= SECTION ================= */
+
 .section{
     padding:70px 10%;
 }
@@ -143,7 +147,8 @@ nav ul li a:hover{
     text-align:center;
 }
 
-/* VISI MISI */
+/* ================= VISI MISI ================= */
+
 #visi{
     background:white;
 }
@@ -160,7 +165,8 @@ nav ul li a:hover{
     padding-left:25px;
 }
 
-/* CARDS */
+/* ================= CARDS ================= */
+
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -205,42 +211,81 @@ nav ul li a:hover{
     color:#555;
 }
 
-/* GALERI */
+/* ================= GALERI ================= */
+
+/*
+   Tinggi slider dibuat TETAP.
+   Jadi ketika gambar berganti,
+   card tidak ikut naik/turun.
+*/
+
 .slider{
     position:relative;
+    width:100%;
+    height:350px;
     overflow:hidden;
+    background:#f5f8f7;
 }
 
+/*
+   Semua gambar berada di posisi yang sama.
+   Tidak menggunakan display:none agar
+   gambar tidak menyebabkan layout bergeser.
+*/
+
 .slide{
-    display:none;
+    display:block;
     width:100%;
-    height:250px;
-    object-fit:cover;
+    height:100%;
+    object-fit:contain;
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    opacity:0;
+    transition:opacity .3s ease;
+
+    pointer-events:none;
 }
 
 .slide.active{
-    display:block;
+    opacity:1;
+    pointer-events:auto;
 }
+
+/* Tombol slider */
 
 .prev,
 .next{
     position:absolute;
     top:50%;
     transform:translateY(-50%);
+
     border:none;
     background:rgba(0,0,0,.5);
     color:white;
+
     font-size:20px;
-    width:38px;
-    height:38px;
+    width:42px;
+    height:42px;
+
     cursor:pointer;
     border-radius:50%;
-    transition:.3s;
+
+    transition:.2s;
+
+    z-index:10;
 }
 
 .prev:hover,
 .next:hover{
     background:#00a884;
+}
+
+.prev:active,
+.next:active{
+    transform:translateY(-50%) scale(.95);
 }
 
 .prev{
@@ -251,7 +296,8 @@ nav ul li a:hover{
     right:12px;
 }
 
-/* KOTAK SARAN */
+/* ================= KOTAK SARAN ================= */
+
 #saran{
     background:#f4f8f7;
 }
@@ -327,7 +373,8 @@ nav ul li a:hover{
     font-weight:bold;
 }
 
-/* SARAN MASUK */
+/* ================= SARAN MASUK ================= */
+
 .saran-masuk{
     max-width:900px;
     margin:50px auto 0;
@@ -395,17 +442,21 @@ nav ul li a:hover{
 }
 
 @keyframes fadeIn{
+
     from{
         opacity:0;
         transform:translateY(15px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer{
     background:linear-gradient(135deg,#009970,#00a884);
     color:white;
@@ -427,16 +478,20 @@ footer img:hover{
     transform:scale(1.15);
 }
 
-/* ANIMATION HEADER */
+/* ================= ANIMATION HEADER ================= */
+
 @keyframes fadeDown{
+
     from{
         opacity:0;
         transform:translateY(-20px);
     }
+
     to{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
 header .logo{
@@ -451,7 +506,8 @@ header p{
     animation:fadeDown 1.2s ease;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
+
 @media(max-width:768px){
 
     header{
@@ -492,8 +548,24 @@ header p{
         font-size:14px;
     }
 
+    /*
+       Slider mobile juga punya tinggi tetap
+       supaya tidak glitch.
+    */
+
+    .slider{
+        height:260px;
+    }
+
     .slide{
-        height:210px;
+        height:100%;
+    }
+
+    .prev,
+    .next{
+        width:38px;
+        height:38px;
+        font-size:17px;
     }
 
     .saran-box{
@@ -504,11 +576,15 @@ header p{
         flex-direction:column;
         align-items:flex-start;
     }
+
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -520,6 +596,8 @@ header p{
 
 </header>
 
+
+<!-- ================= NAVBAR ================= -->
 
 <nav>
 
@@ -540,7 +618,7 @@ header p{
 </nav>
 
 
-<!-- PROFIL -->
+<!-- ================= PROFIL ================= -->
 
 <section id="profil" class="section">
 
@@ -556,7 +634,7 @@ header p{
 </section>
 
 
-<!-- VISI MISI -->
+<!-- ================= VISI MISI ================= -->
 
 <section id="visi" class="section">
 
@@ -591,7 +669,7 @@ header p{
 </section>
 
 
-<!-- PENGURUS -->
+<!-- ================= PENGURUS ================= -->
 
 <section id="pengurus" class="section">
 
@@ -819,12 +897,14 @@ header p{
 </section>
 
 
-<!-- GALERI -->
+<!-- ================= GALERI ================= -->
 
 <section id="galeri" class="section">
 
     <h2>Galeri Kegiatan</h2>
 
+
+    <!-- HARI KARTINI -->
 
     <div class="card">
 
@@ -832,11 +912,11 @@ header p{
 
         <div class="slider">
 
-            <img src="kegiatan1.png" class="slide active">
+            <img src="kegiatan1.png" class="slide active" alt="Hari Kartini">
 
-            <img src="kegiatan1-2.png" class="slide">
+            <img src="kegiatan1-2.png" class="slide" alt="Hari Kartini">
 
-            <img src="kegiatan1-3.png" class="slide">
+            <img src="kegiatan1-3.png" class="slide" alt="Hari Kartini">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
 
@@ -849,58 +929,82 @@ header p{
 
     <br>
 
+
+    <!-- SANLAT -->
 
     <div class="card">
 
         <h4>Sanlat & Bukber</h4>
+
         <div class="slider">
-            <img src="kegiatan2.png" class="slide active">
 
-            <img src="kegiatan2-2.png" class="slide">
+            <img src="kegiatan2.png" class="slide active" alt="Sanlat">
 
-            <img src="kegiatan2-3.png" class="slide">
+            <img src="kegiatan2-2.png" class="slide" alt="Sanlat">
+
+            <img src="kegiatan2-3.png" class="slide" alt="Sanlat">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
 
             <button class="next" onclick="changeSlide(this,1)">❯</button>
+
         </div>
+
     </div>
+
+
     <br>
+
+
+    <!-- CLASSMEET -->
+
     <div class="card">
 
         <h4>Classmeet & Fun Run</h4>
 
         <div class="slider">
 
-            <img src="kegiatan3.png" class="slide active">
+            <img src="kegiatan3.png" class="slide active" alt="Classmeet">
 
-            <img src="kegiatan3-2.png" class="slide">
+            <img src="kegiatan3-2.png" class="slide" alt="Classmeet">
 
-            <img src="kegiatan3-3.png" class="slide">
+            <img src="kegiatan3-3.png" class="slide" alt="Classmeet">
 
-            <img src="kegiatan3-4.png" class="slide">
+            <img src="kegiatan3-4.png" class="slide" alt="Classmeet">
 
-            <img src="kegiatan3-5.png" class="slide">
+            <img src="kegiatan3-5.png" class="slide" alt="Classmeet">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
 
             <button class="next" onclick="changeSlide(this,1)">❯</button>
 
         </div>
-            <br>
+
+    </div>
+
+
+    <br>
+
+
+    <!-- MPLS -->
+
     <div class="card">
 
         <h4>MPLS 2026</h4>
 
         <div class="slider">
 
-            <img src="kegiatan4.png" class="slide active">
-            <img src="kegiatan4-2.png" class="slide">
-            <img src="kegiatan4-3.png" class="slide">
-            <img src="kegiatan4-4.png" class="slide">
-            <img src="kegiatan4-6.png" class="slide">
-            <img src="kegiatan4-5.png" class="slide">
-            <img src="kegiatan4-6.png" class="slide">
+            <img src="kegiatan4.png" class="slide active" alt="MPLS">
+
+            <img src="kegiatan4-2.png" class="slide" alt="MPLS">
+
+            <img src="kegiatan4-3.png" class="slide" alt="MPLS">
+
+            <img src="kegiatan4-4.png" class="slide" alt="MPLS">
+
+            <img src="kegiatan4-6.png" class="slide" alt="MPLS">
+
+            <img src="kegiatan4-5.png" class="slide" alt="MPLS">
 
             <button class="prev" onclick="changeSlide(this,-1)">❮</button>
 
@@ -913,7 +1017,7 @@ header p{
 </section>
 
 
-<!-- KOTAK SARAN -->
+<!-- ================= KOTAK SARAN ================= -->
 
 <section id="saran" class="section">
 
@@ -969,7 +1073,7 @@ header p{
     </div>
 
 
-    <!-- SARAN MASUK -->
+    <!-- ================= SARAN MASUK ================= -->
 
     <div class="saran-masuk">
 
@@ -985,7 +1089,7 @@ header p{
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1001,22 +1105,27 @@ header p{
         href="https://instagram.com/osis.smkassyafiiyah01"
         target="_blank"
     >
+
         <img
             src="ig.png"
             width="50"
             alt="Instagram"
         >
+
     </a>
+
 
     <a
         href="https://www.tiktok.com/@osissmkassyafiiya"
         target="_blank"
     >
+
         <img
             src="tt.png"
             width="30"
             alt="TikTok"
         >
+
     </a>
 
 </footer>
@@ -1040,11 +1149,11 @@ function changeSlide(button,step){
 
             current=index;
 
-            slide.classList.remove("active");
-
         }
 
     });
+
+    slides[current].classList.remove("active");
 
     current+=step;
 
@@ -1061,7 +1170,7 @@ function changeSlide(button,step){
 }
 
 
-/* AUTO SLIDER */
+/* ================= AUTO SLIDER ================= */
 
 document.querySelectorAll(".slider").forEach(slider=>{
 
@@ -1086,7 +1195,7 @@ document.querySelectorAll(".slider").forEach(slider=>{
 });
 
 
-/* ANIMASI CARD */
+/* ================= ANIMASI CARD ================= */
 
 const cards=document.querySelectorAll(".card");
 
@@ -1130,7 +1239,7 @@ let semuaSaran =
 tampilkanSaran();
 
 
-/* FORM SARAN */
+/* ================= FORM SARAN ================= */
 
 document
 .getElementById("formSaran")
@@ -1266,6 +1375,7 @@ function tampilkanSaran(){
             <p>
                 "${escapeHTML(saran.isi)}"
             </p>
+
         `;
 
         daftar.appendChild(card);
