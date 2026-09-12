@@ -1046,8 +1046,7 @@ header p{
     appId: "1:166076128155:web:ab27cb92abf1ea39e1df3e"
   };
     const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
+    const db = getFirestore(app);
 const saranCollection = collection(db, "saranOSIS");
 
 /* ================= COLLECTION ================= */
@@ -1062,10 +1061,6 @@ const saranCollection = collection(db, "saranOSIS");
         ├── saran 3
         └── dst...
 */
-
-const saranCollection = collection(db,"saranOSIS");
-
-
 /* ================= SLIDER ================= */
 
 window.changeSlide = function(button,step){
