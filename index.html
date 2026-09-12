@@ -1046,26 +1046,6 @@ header p{
     appId: "1:166076128155:web:ab27cb92abf1ea39e1df3e"
   };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-const firebaseConfig = {
-    const firebaseConfig = {
-  apiKey: "AIzaSyArVsNPPWgWcQTnc8Q5x_o-5a5kc4hO6MM",
-  authDomain: "website-osissmkasvie.firebaseapp.com",
-  projectId: "website-osissmkasvie",
-  storageBucket: "website-osissmkasvie.firebasestorage.app",
-  messagingSenderId: "166076128155",
-  appId: "1:166076128155:web:ab27cb92abf1ea39e1df3e"
-};
-
-
-/* ================= FIREBASE ================= */
-
-const app = initializeApp(firebaseConfig);
-
-const db = getFirestore(app);
-
-
 /* ================= COLLECTION ================= */
 
 /*
@@ -1224,13 +1204,9 @@ form.addEventListener("submit",async function(e){
            =============================== */
 
         await addDoc(saranCollection,{
-
             nama: nama,
-
             kelas: kelas,
-
             isi: isi,
-
             waktu: serverTimestamp()
 
         });
