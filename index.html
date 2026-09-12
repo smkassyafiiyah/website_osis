@@ -1045,6 +1045,10 @@ header p{
     messagingSenderId: "166076128155",
     appId: "1:166076128155:web:ab27cb92abf1ea39e1df3e"
   };
+    const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+const saranCollection = collection(db, "saranOSIS");
 
 /* ================= COLLECTION ================= */
 
